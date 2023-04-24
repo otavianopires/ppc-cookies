@@ -1,0 +1,64 @@
+.ppc-cookie-checkbox input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 34px;
+  height: 19px;
+  background: #7e8993;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  transition: 0.3s;
+}
+
+.ppc-cookie-checkbox input[type="checkbox"]::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  transition: 0.3s;
+  transform: translate(0px);
+}
+
+.ppc-cookie-checkbox input:checked[type="checkbox"]::after {
+  border-color: #007cba;
+  transform: translate(15px, 0px);
+}
+
+.ppc-cookie-checkbox input:checked[type="checkbox"] {
+  background: #0d99d5;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.ppc-cookie-checkbox input[type="checkbox"]:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.ppc-cookie-checkbox input:focus[type="checkbox"]:focus::after {
+  border-color: #007cba;
+}
+
+.ppc-cookie-checkbox input:checked[type="checkbox"]::before {
+  display: none;
+}
+
+.ppc-cookie-paid-url-container {
+  display: flex;
+  gap: 5px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .ppc-cookie-paid-url-container {
+    flex-direction: column;
+    align-items: start;
+  }
+}
